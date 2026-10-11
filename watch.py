@@ -3,7 +3,7 @@ import os
 import urllib.request
 from pathlib import Path
 
-HANDLES = ["FFXIV_NEWS_EN", "FFXIV_NEWS_DE", "FFXIV_NEWS_FR"]
+HANDLES = ["FortniteStatus", "FNCompetitive", "RL_Status", "FallGuysOwl"]
 WEBHOOK = os.environ["TEAMS_WEBHOOK_URL"]
 STATE = Path("seen.json")
 HEADERS = {
@@ -69,7 +69,7 @@ def notify(handle: str, text: str, url: str) -> None:
                             "type": "TextBlock",
                             "weight": "Bolder",
                             "size": "Medium",
-                            "text": f"A new post from {handle}!",
+                            "text": f"{handle} is yapping!",
                         },
                         {
                             "type": "TextBlock",
